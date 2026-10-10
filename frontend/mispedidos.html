@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Mis Pedidos - VidaFit Market
+    </title>
+
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <h1>
+        VidaFit Market
+    </h1>
+
+
+    <nav>
+
+        <a href="index.html">
+            Inicio
+        </a>
+
+        <a href="catalogo.html">
+            Catálogo
+        </a>
+
+        <a href="recomendaciones.html">
+            Recomendaciones
+        </a>
+
+        <a href="mascotas.html">
+            Mis Mascotas
+        </a>
+
+        <a href="carrito.html">
+            Carrito
+        </a>
+
+        <a href="mispedidos.html">
+            Mis Pedidos
+        </a>
+
+        <a href="blog.html">
+            Blog
+        </a>
+
+        <a href="#" onclick="cerrarSesion()">
+            Cerrar sesión
+        </a>
+
+    </nav>
+
+
+</header>
+
+
+
+
+<main>
+
+
+<h2 class="titulo-seccion">
+    Mis Pedidos
+</h2>
+
+
+
+
+<section class="formulario">
+
+
+<h3>
+    Mis compras realizadas
+</h3>
+
+
+<p>
+    Aquí puede consultar el historial de pedidos realizados.
+</p>
+
+
+</section>
+
+
+
+
+
+
+<section>
+
+
+<h3 class="titulo-seccion">
+    Historial de Pedidos
+</h3>
+
+
+
+<div style="overflow-x:auto;">
+
+
+<table class="tabla">
+
+
+<thead>
+
+
+<tr>
+
+<th>
+Número de pedido
+</th>
+
+
+<th>
+Total
+</th>
+
+
+<th>
+Estado
+</th>
+
+
+<th>
+Fecha
+</th>
+
+
+<th>
+Acciones
+</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+<tbody id="tablaMisPedidos">
+
+
+<tr>
+
+<td colspan="5">
+
+Cargando pedidos...
+
+</td>
+
+</tr>
+
+
+</tbody>
+
+
+
+</table>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section
+id="seccionDetalle"
+style="display:none;">
+
+
+
+<h3 class="titulo-seccion">
+
+Detalle de la Compra
+
+</h3>
+
+
+
+
+<div style="overflow-x:auto;">
+
+
+<table class="tabla">
+
+
+<thead>
+
+
+<tr>
+
+
+<th>
+Producto
+</th>
+
+
+<th>
+Categoría
+</th>
+
+
+<th>
+Precio
+</th>
+
+
+<th>
+Cantidad
+</th>
+
+
+<th>
+Subtotal
+</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+<tbody id="tablaDetalle">
+
+
+</tbody>
+
+
+
+</table>
+
+
+</div>
+
+
+
+
+
+
+<h3 class="titulo-seccion">
+
+
+Total de la compra:
+
+
+<span id="totalDetalle">
+
+$0
+
+</span>
+
+
+</h3>
+
+
+
+
+
+
+<div class="formulario">
+
+
+<button
+type="button"
+onclick="cerrarDetalle()">
+
+Cerrar detalle
+
+</button>
+
+
+</div>
+
+
+
+
+</section>
+
+
+
+
+
+</main>
+
+
+
+
+
+
+<footer>
+
+
+<p>
+© 2026 VidaFit Market
+</p>
+
+
+</footer>
+
+
+
+
+
+
+<script src="js/mispedidos.js"></script>
+
+<script src="js/seguridad.js"></script>
+
+<script src="js/menu.js"></script>
+
+
+
+</body>
+
+</html>

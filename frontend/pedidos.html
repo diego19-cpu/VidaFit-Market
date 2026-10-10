@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Gestión de Pedidos - VidaFit Market
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/estilos.css"
+    >
+
+
+    <style>
+
+        .campo-pedido {
+            margin-bottom: 15px;
+        }
+
+        .campo-pedido label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .campo-pedido input,
+        .campo-pedido select {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .botones-pedido {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .tabla-contenedor {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        .tabla-contenedor table {
+            width: 100%;
+        }
+
+    </style>
+
+
+    <!-- SEGURIDAD DEL ADMINISTRADOR -->
+
+    <script src="js/seguridad.js"></script>
+
+</head>
+
+
+<body>
+
+
+    <!-- ENCABEZADO -->
+
+    <header>
+
+        <h1>
+            VidaFit Market
+        </h1>
+
+
+        <nav>
+
+            <a href="index.html">
+                Inicio
+            </a>
+
+            <a href="usuarios.html">
+                Usuarios
+            </a>
+
+            <a href="productos.html">
+                Productos
+            </a>
+
+            <a href="pedidos.html">
+                Pedidos
+            </a>
+
+            <a href="blog.html">
+                Blog
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <main>
+
+
+        <h2 class="titulo-seccion">
+            Gestión de Pedidos
+        </h2>
+
+
+
+        <!-- FORMULARIO CORRECTO -->
+
+        <form
+            id="formPedido"
+            class="formulario"
+        >
+
+
+            <h3 id="tituloFormulario">
+
+                Seleccione un pedido para actualizar
+
+            </h3>
+
+
+
+            <!-- ID DEL PEDIDO -->
+
+            <div class="campo-pedido">
+
+                <label for="idPedido">
+
+                    ID del pedido
+
+                </label>
+
+
+                <input
+                    type="number"
+                    id="idPedido"
+                    placeholder="Seleccione un pedido de la lista"
+                    readonly
+                >
+
+            </div>
+
+
+
+            <!-- ID DEL USUARIO OCULTO -->
+
+            <input
+                type="hidden"
+                id="idUsuario"
+            >
+
+
+
+            <!-- NOMBRE DEL USUARIO -->
+
+            <div class="campo-pedido">
+
+                <label for="usuarioPedido">
+
+                    Usuario
+
+                </label>
+
+
+                <input
+                    type="text"
+                    id="usuarioPedido"
+                    placeholder="Nombre del usuario"
+                    readonly
+                >
+
+            </div>
+
+
+
+            <!-- TOTAL -->
+
+            <div class="campo-pedido">
+
+                <label for="total">
+
+                    Total del pedido
+
+                </label>
+
+
+                <input
+                    type="number"
+                    id="total"
+                    placeholder="Total del pedido"
+                    readonly
+                >
+
+            </div>
+
+
+
+            <!-- ESTADO -->
+
+            <div class="campo-pedido">
+
+                <label for="estado">
+
+                    Estado del pedido
+
+                </label>
+
+
+                <select id="estado">
+
+
+                    <option value="Pendiente">
+
+                        Pendiente
+
+                    </option>
+
+
+                    <option value="Aprobado">
+
+                        Aprobado
+
+                    </option>
+
+
+                    <option value="Cancelado">
+
+                        Cancelado
+
+                    </option>
+
+
+                    <option value="Entregado">
+
+                        Entregado
+
+                    </option>
+
+
+                </select>
+
+            </div>
+
+
+
+            <!-- FECHA -->
+
+            <div class="campo-pedido">
+
+                <label for="fecha">
+
+                    Fecha del pedido
+
+                </label>
+
+
+                <input
+                    type="date"
+                    id="fecha"
+                    readonly
+                >
+
+            </div>
+
+
+
+            <!-- BOTONES -->
+
+            <div class="botones-pedido">
+
+
+                <button
+                    type="submit"
+                    id="btnGuardar"
+                >
+
+                    Actualizar estado
+
+                </button>
+
+
+                <button
+                    type="button"
+                    id="btnLimpiar"
+                >
+
+                    Limpiar
+
+                </button>
+
+
+            </div>
+
+
+        </form>
+
+
+
+        <!-- LISTA DE PEDIDOS -->
+
+        <section>
+
+
+            <h3 class="titulo-seccion">
+
+                Lista de Pedidos
+
+            </h3>
+
+
+            <div class="tabla-contenedor">
+
+
+                <table>
+
+
+                    <thead>
+
+
+                        <tr>
+
+
+                            <th>
+                                ID
+                            </th>
+
+
+                            <th>
+                                Usuario
+                            </th>
+
+
+                            <th>
+                                Total
+                            </th>
+
+
+                            <th>
+                                Estado
+                            </th>
+
+
+                            <th>
+                                Fecha
+                            </th>
+
+
+                            <th>
+                                Acciones
+                            </th>
+
+
+                        </tr>
+
+
+                    </thead>
+
+
+                    <tbody id="tablaPedidos">
+
+
+                        <tr>
+
+                            <td colspan="6">
+
+                                Cargando pedidos...
+
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+
+                </table>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <footer>
+
+        <p>
+            © 2026 VidaFit Market
+        </p>
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT DE PEDIDOS -->
+
+    <script src="js/pedidos.js"></script>
+<script src="js/menu.js"></script>
+
+</body>
+</html>

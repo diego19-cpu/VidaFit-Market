@@ -1,0 +1,388 @@
+
+  <!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Recomendaciones - VidaFit Market
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/estilos.css">
+
+</head>
+
+
+<body>
+
+
+    <header>
+
+        <h1>
+            VidaFit Market
+        </h1>
+
+    </header>
+
+
+    <main>
+
+
+        <h2 class="titulo-seccion">
+            Recomendaciones
+        </h2>
+
+
+        <!-- ===================================== -->
+        <!-- FORMULARIO -->
+        <!-- ===================================== -->
+
+        <section class="formulario">
+
+
+            <h3>
+                Generar recomendación
+            </h3>
+
+
+            <form id="formRecomendacion">
+
+
+                <!-- USUARIO -->
+
+                <input 
+    type="hidden" 
+    id="idUsuario">
+
+                <!-- TIPO -->
+
+                <select
+                    id="tipoRecomendacion"
+                    required>
+
+                    <option value="Humano">
+                        Para mí
+                    </option>
+
+                    <option value="Mascota">
+                        Para mi mascota
+                    </option>
+
+                </select>
+
+
+
+                <!-- ================================= -->
+                <!-- CAMPOS HUMANO -->
+                <!-- ================================= -->
+
+                <div id="camposHumano">
+
+
+                    <select id="objetivo">
+
+                        <option value="">
+                            Seleccione un objetivo
+                        </option>
+
+                        <option value="Ganar masa muscular">
+                            Ganar masa muscular
+                        </option>
+
+                        <option value="Recuperación física">
+                            Recuperación física
+                        </option>
+
+                        <option value="Salud digestiva">
+                            Salud digestiva
+                        </option>
+
+                        <option value="Bienestar general">
+                            Bienestar general
+                        </option>
+
+                        <option value="Vitaminas y minerales">
+                            Vitaminas y minerales
+                        </option>
+
+                        <option value="Fortalecimiento nutricional">
+                            Fortalecimiento nutricional
+                        </option>
+
+                    </select>
+
+
+                    <select id="actividad">
+
+                        <option value="">
+                            Seleccione actividad física
+                        </option>
+
+                        <option value="Baja">
+                            Baja
+                        </option>
+
+                        <option value="Moderada">
+                            Moderada
+                        </option>
+
+                        <option value="Alta">
+                            Alta
+                        </option>
+
+                    </select>
+
+
+                </div>
+
+
+
+                <!-- ================================= -->
+                <!-- CAMPOS MASCOTA -->
+                <!-- ================================= -->
+
+                <div
+                    id="camposMascota"
+                    style="display: none;">
+
+
+                    <select id="idMascota">
+
+                        <option value="">
+                            Seleccione una mascota
+                        </option>
+
+                    </select>
+
+
+                    <input
+                        type="text"
+                        id="necesidad"
+                        placeholder="Necesidad de la mascota"
+                        readonly>
+
+
+                </div>
+
+
+
+                <!-- GENERAR -->
+
+                <button type="submit">
+
+                    Obtener recomendación
+
+                </button>
+
+
+
+                <!-- LIMPIAR -->
+
+                <button
+                    type="button"
+                    onclick="limpiarFormulario()">
+
+                    Limpiar
+
+                </button>
+
+
+            </form>
+
+
+        </section>
+
+
+
+        <!-- ===================================== -->
+        <!-- RESULTADO -->
+        <!-- ===================================== -->
+
+        <section
+            id="resultado"
+            class="formulario"
+            style="display: none;">
+
+
+            <h3>
+                Producto recomendado
+            </h3>
+
+
+            <h2 id="nombreProducto">
+            </h2>
+
+
+            <p>
+
+                <strong>
+                    Categoría:
+                </strong>
+
+                <span id="categoriaProducto">
+                </span>
+
+            </p>
+
+
+            <p>
+
+                <strong>
+                    Precio:
+                </strong>
+
+                <span id="precioProducto">
+                </span>
+
+            </p>
+
+
+            <p>
+
+                <strong>
+                    Descripción:
+                </strong>
+
+                <span id="descripcionProducto">
+                </span>
+
+            </p>
+
+
+            <p>
+
+                <strong>
+                    Beneficio:
+                </strong>
+
+                <span id="beneficioProducto">
+                </span>
+
+            </p>
+
+
+            <p>
+
+                <strong>
+                    Disponibilidad:
+                </strong>
+
+                <span id="stockProducto">
+                </span>
+
+            </p>
+
+
+        </section>
+
+
+
+        <!-- ===================================== -->
+        <!-- LISTA -->
+        <!-- ===================================== -->
+
+        <section>
+
+
+            <h3 class="titulo-seccion">
+                Recomendaciones Registradas
+            </h3>
+
+
+            <div style="overflow-x: auto;">
+
+
+                <table class="tabla">
+
+
+                    <thead>
+
+
+                        <tr>
+
+                            <th>
+                                ID
+                            </th>
+
+                            <th>
+                                Usuario
+                            </th>
+
+                            <th>
+                                Tipo
+                            </th>
+
+                            <th>
+                                Mascota
+                            </th>
+
+                            <th>
+                                Criterio
+                            </th>
+
+                            <th>
+                                Producto
+                            </th>
+
+                            <th>
+                                Acciones
+                            </th>
+
+                        </tr>
+
+
+                    </thead>
+
+
+                    <tbody id="tablaRecomendaciones">
+
+
+                        <tr>
+
+                            <td colspan="7">
+
+                                Cargando recomendaciones...
+
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+
+                </table>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 VidaFit Market
+        </p>
+
+    </footer>
+
+
+  <script src="js/recomendaciones.js"></script>
+<script src="js/seguridad.js"></script>
+<script src="js/menu.js"></script>
+
+</body>
+</html>

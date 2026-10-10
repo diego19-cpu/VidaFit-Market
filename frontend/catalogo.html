@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Catálogo - VidaFit Market
+    </title>
+
+
+    <link
+        rel="stylesheet"
+        href="css/estilos.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ========================================= -->
+    <!-- ENCABEZADO -->
+    <!-- ========================================= -->
+
+    <header>
+
+
+        <h1>
+            VidaFit Market
+        </h1>
+
+
+        <!-- MENÚ AUTOMÁTICO SEGÚN EL ROL -->
+
+        <nav id="menuPrincipal">
+
+        </nav>
+
+
+    </header>
+
+<div class="contenedor-logo-lateral">
+
+    <a href="index.html">
+
+        <img
+            src="img/logo/logo.png"
+            alt="Logo de VidaFit Market"
+            class="logo-lateral"
+        >
+
+    </a>
+
+</div>
+
+    <!-- ========================================= -->
+    <!-- CONTENIDO PRINCIPAL -->
+    <!-- ========================================= -->
+
+    <<main class="main-catalogo">>
+
+
+        <h2 class="titulo-seccion">
+
+            Catálogo de Productos
+
+        </h2>
+
+
+
+        <!-- ========================================= -->
+        <!-- FILTROS -->
+        <!-- ========================================= -->
+<div class="catalogo-layout">
+        <section class="formulario">
+
+
+            <h3>
+                Filtrar productos
+            </h3>
+
+
+            <select id="filtroTipo" size="3">
+
+
+                <option value="Todos">
+
+                    Todos los productos
+
+                </option>
+
+
+                <option value="Humano">
+
+                    Productos para humanos
+
+                </option>
+
+
+                <option value="Mascota">
+
+                    Productos para mascotas
+
+                </option>
+
+
+            </select>
+            <h4>Categoría</h4>
+
+<select id="filtroCategoria" size="8">
+
+    <option value="Todos">
+        Todas las categorías
+    </option>
+
+    <option value="Vitaminas">
+        Vitaminas y minerales
+    </option>
+
+    <option value="Omegas">
+        Omegas
+    </option>
+
+    <option value="Probioticos">
+        Probióticos y prebióticos
+    </option>
+
+    <option value="Proteinas">
+        Proteínas
+    </option>
+
+    <option value="Creatina">
+        Creatina
+    </option>
+
+    <option value="Colagenos">
+        Colágenos
+    </option>
+
+    <option value="Bienestar">
+        Bienestar general
+    </option>
+
+</select>
+
+
+        </section>
+
+<div class="contenido-catalogo">
+
+        <!-- ========================================= -->
+        <!-- MENSAJE DEL CARRITO -->
+        <!-- ========================================= -->
+
+        <section
+            id="mensajeCarrito"
+            class="formulario"
+            style="display: none;"
+        >
+
+
+            <p id="textoMensajeCarrito">
+
+            </p>
+
+
+        </section>
+
+
+
+        <!-- ========================================= -->
+        <!-- LISTA DE PRODUCTOS -->
+        <!-- ========================================= -->
+
+        <section>
+
+
+            <h3 class="titulo-seccion">
+
+                Productos Disponibles
+
+            </h3>
+
+
+            <div id="listaProductos">
+
+
+                <p>
+
+                    Cargando productos...
+
+                </p>
+
+
+            </div>
+
+
+        </section>
+</div>
+</div>
+
+    </main>
+
+
+
+    <!-- ========================================= -->
+    <!-- PIE DE PÁGINA -->
+    <!-- ========================================= -->
+
+    <footer>
+
+
+        <p>
+
+            © 2026 VidaFit Market
+
+        </p>
+
+
+    </footer>
+
+
+
+    <!-- ========================================= -->
+    <!-- JAVASCRIPT DEL CATÁLOGO -->
+    <!-- ========================================= -->
+
+    <script src="js/catalogo.js"></script>
+
+
+    <!-- ========================================= -->
+    <!-- MENÚ SEGÚN EL ROL -->
+    <!-- ========================================= -->
+
+    <script src="js/menu.js"></script>
+
+<script src="js/contador-carrito.js"></script>
+<script src="js/contacto.js"></script>
+</body>
+
+</html>

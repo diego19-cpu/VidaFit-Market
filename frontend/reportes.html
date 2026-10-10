@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta 
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+Reportes de Ventas - VidaFit Market
+</title>
+
+
+<link rel="stylesheet" href="css/estilos.css">
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+
+
+<body>
+
+
+<header>
+
+<h1>
+VidaFit Market
+</h1>
+
+
+<nav>
+
+<a href="index.html">Inicio</a>
+
+<a href="devoluciones.html">Devoluciones</a>
+
+<a href="administradores.html">Administradores</a>
+
+<a href="usuarios.html">Usuarios</a>
+
+<a href="productos.html">Productos</a>
+
+<a href="mascotas.html">Mascotas</a>
+
+<a href="pedidos.html">Pedidos</a>
+
+<a href="recomendaciones.html">Recomendaciones</a>
+
+<a href="blog.html">Blog</a>
+
+<a href="acerca-de-vidafit.html">
+Acerca de VidaFit Market
+</a>
+
+<a href="login.html">
+Salir
+</a>
+
+
+</nav>
+
+
+</header>
+
+
+
+
+
+<main>
+
+<h1 class="titulo-reporte">
+     Reportes de Ventas
+</h1>
+
+
+
+
+<div class="filtros-reporte">
+
+
+<label>
+Mes:
+</label>
+
+
+<select id="mesReporte">
+
+<option value="1">
+Enero
+</option>
+
+<option value="2">
+Febrero
+</option>
+
+<option value="3">
+Marzo
+</option>
+
+<option value="4">
+Abril
+</option>
+
+<option value="5">
+Mayo
+</option>
+
+<option value="6">
+Junio
+</option>
+
+<option value="7">
+Julio
+</option>
+
+<option value="8">
+Agosto
+</option>
+
+<option value="9">
+Septiembre
+</option>
+
+<option value="10">
+Octubre
+</option>
+
+<option value="11">
+Noviembre
+</option>
+
+<option value="12">
+Diciembre
+</option>
+
+</select>
+
+
+
+<label>
+Año:
+</label>
+
+
+<input
+type="number"
+id="añoReporte"
+value="2026"
+>
+
+
+<button id="btnConsultar">
+
+Consultar
+
+</button>
+
+
+</div>
+
+<button onclick="window.print()">
+    Descargar Reporte PDF
+</button>
+
+
+
+
+<div class="tarjetas-reportes">
+
+
+<div class="tarjeta-reporte">
+
+<h3>
+ Ventas del día
+</h3>
+
+<p id="ventasDia">
+$0
+</p>
+
+</div>
+
+
+
+
+<div class="tarjeta-reporte">
+
+<h3>
+ Ventas del mes
+</h3>
+
+<p id="ventasMes">
+$0
+</p>
+
+</div>
+
+
+
+
+<div class="tarjeta-reporte">
+
+<h3>
+ Pedidos entregados
+</h3>
+
+<p id="cantidadPedidos">
+0
+</p>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<div class="titulo-seccion">
+
+     Productos más vendidos
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+Producto
+</th>
+
+<th>
+Cantidad vendida
+</th>
+
+</tr>
+
+</thead>
+
+
+<tbody id="tablaProductosVendidos">
+
+</tbody>
+
+
+</table>
+
+
+
+
+
+
+
+<div class="titulo-seccion">
+
+     Gráfica productos más vendidos
+
+</div>
+
+
+<canvas id="graficaProductosVendidos"></canvas>
+
+
+
+
+
+
+
+<div class="titulo-seccion">
+
+     Ventas por mes
+
+</div>
+
+<canvas id="graficaVentasMes"></canvas>
+
+
+
+
+
+
+
+
+<div class="titulo-seccion">
+
+     Alertas del sistema
+
+</div>
+
+
+<div id="contenedorAlertas">
+
+</div>
+
+
+
+
+
+
+<script src="js/menu.js"></script>
+<script src="js/reportes.js"></script>
+
+
+</main>
+
+
+</body>
+
+</html>

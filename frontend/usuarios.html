@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Usuarios - VidaFit Market
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/estilos.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>
+            VidaFit Market
+        </h1>
+
+        <nav>
+
+            <a href="index.html">
+                Inicio
+            </a>
+
+            <a href="administradores.html">
+                Administradores
+            </a>
+
+            <a href="usuarios.html">
+                Usuarios
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <h2 class="titulo-seccion">
+            Gestión de Usuarios
+        </h2>
+
+
+        <section class="formulario">
+
+            <h3 id="tituloFormulario">
+                Registrar usuario
+            </h3>
+
+
+            <form id="formUsuario">
+
+
+                <input
+                    type="hidden"
+                    id="idUsuario">
+
+
+                <input
+                    type="text"
+                    id="nombre"
+                    placeholder="Nombre"
+                    required>
+
+
+                <input
+                    type="text"
+                    id="apellido"
+                    placeholder="Apellido"
+                    required>
+
+
+                <input
+                    type="email"
+                    id="correo"
+                    placeholder="Correo electrónico"
+                    required>
+
+
+                <input
+                    type="text"
+                    id="telefono"
+                    placeholder="Teléfono"
+                    required>
+
+
+                <input
+                    type="password"
+                    id="contrasena"
+                    placeholder="Contraseña"
+                    required>
+
+
+                <button
+                    type="submit"
+                    id="btnGuardar">
+
+                    Guardar usuario
+
+                </button>
+
+
+                <button
+                    type="button"
+                    id="btnLimpiar">
+
+                    Limpiar
+
+                </button>
+
+
+            </form>
+
+        </section>
+
+
+        <section>
+
+            <h3 class="titulo-seccion">
+                Lista de Usuarios
+            </h3>
+
+
+            <table class="tabla">
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Correo</th>
+                        <th>Teléfono</th>
+                        <th>Acciones</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="tablaUsuarios">
+
+                    <tr>
+
+                        <td colspan="6">
+                            Cargando usuarios...
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 VidaFit Market
+        </p>
+
+    </footer>
+
+
+ <script src="js/usuarios.js"></script>
+<script src="js/seguridad.js"></script>
+<script src="js/menu.js"></script>
+
+</body>
+</html>

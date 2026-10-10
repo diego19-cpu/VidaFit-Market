@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Carrito de Compras - VidaFit Market
+    </title>
+
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <h1>
+        VidaFit Market
+    </h1>
+
+
+    <nav>
+
+        <a href="index.html">
+            Inicio
+        </a>
+
+        <a href="catalogo.html">
+            Catálogo
+        </a>
+
+        <a href="carrito.html">
+            Carrito
+        </a>
+
+        <a href="mispedidos.html">
+            Mis Pedidos
+        </a>
+
+        <a href="blog.html">
+            Blog
+        </a>
+
+        <a href="#" onclick="cerrarSesion()">
+            Cerrar sesión
+        </a>
+
+    </nav>
+
+
+</header>
+
+
+
+
+
+<main>
+
+
+<h2 class="titulo-seccion">
+    Carrito de Compras
+</h2>
+
+
+
+
+
+<!-- CARRITO VACÍO -->
+
+
+<section
+id="carritoVacio"
+class="formulario"
+style="display:none;">
+
+
+
+<h3>
+    Tu carrito está vacío
+</h3>
+
+
+<p>
+    Agrega productos desde el catálogo.
+</p>
+
+
+
+<button
+type="button"
+onclick="volverCatalogo()">
+
+
+Ir al catálogo
+
+
+</button>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- CARRITO -->
+
+<section id="seccionCarrito">
+
+
+
+
+
+<div style="overflow-x:auto;">
+
+
+
+<table class="tabla">
+
+
+<thead>
+
+
+<tr>
+
+
+<th>
+Imagen
+</th>
+
+
+<th>
+Producto
+</th>
+
+
+<th>
+Precio
+</th>
+
+
+<th>
+Cantidad
+</th>
+
+
+<th>
+Subtotal
+</th>
+
+
+<th>
+Acciones
+</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+<tbody id="tablaCarrito">
+
+
+<tr>
+
+
+<td colspan="6">
+
+Cargando carrito...
+
+</td>
+
+
+</tr>
+
+
+</tbody>
+
+
+
+
+</table>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- RESUMEN -->
+
+
+<section class="formulario">
+
+
+<h3>
+Resumen de la Compra
+</h3>
+
+
+
+
+<!-- USUARIO ACTUAL -->
+
+
+<p>
+
+<strong>
+Usuario:
+</strong>
+
+
+<span id="nombreUsuarioCompra">
+
+Usuario actual
+
+</span>
+
+
+</p>
+
+
+
+
+
+
+<p>
+
+
+<strong>
+Total de productos:
+</strong>
+
+
+<span id="totalProductos">
+
+0
+
+</span>
+
+
+</p>
+
+
+
+
+
+
+<h2>
+
+
+Total:
+
+
+<span id="totalCompra">
+
+$0
+
+</span>
+
+
+</h2>
+
+
+
+
+
+
+
+<button
+type="button"
+onclick="volverCatalogo()">
+
+
+Seguir comprando
+
+
+</button>
+
+
+
+
+
+<button
+type="button"
+onclick="vaciarCarrito()">
+
+
+Vaciar carrito
+
+
+</button>
+
+
+
+
+
+
+<button
+type="button"
+id="btnConfirmarCompra"
+onclick="confirmarCompra()">
+
+
+
+Confirmar compra
+
+
+
+</button>
+
+
+
+
+
+</section>
+
+
+
+
+
+</section>
+
+
+
+
+</main>
+
+
+
+
+
+
+
+<footer>
+
+
+<p>
+
+© 2026 VidaFit Market
+
+</p>
+
+
+</footer>
+
+
+
+
+
+
+
+<script src="js/carrito.js"></script>
+
+<script src="js/seguridad.js"></script>
+
+<script src="js/menu.js"></script>
+
+
+<script src="js/contacto.js"></script>
+</body>
+
+</html>

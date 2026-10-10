@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Iniciar sesión - VidaFit Market
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/estilos.css"
+    >
+
+</head>
+
+
+<body class="pagina-login">
+
+
+    <main class="login-contenedor">
+
+
+        <!-- ========================================= -->
+        <!-- PANEL IZQUIERDO -->
+        <!-- ========================================= -->
+
+        <section class="login-presentacion">
+
+            <div class="login-marca">
+
+                <div class="login-logo-contenedor">
+
+                    <img
+                        src="img/logo/logo.png"
+                        alt="Logo de VidaFit Market"
+                        class="login-logo"
+                    >
+
+                </div>
+
+
+                <h1>
+                    VidaFit Market
+                </h1>
+
+
+                <p class="login-frase">
+
+                    Bienestar y nutrición para personas y mascotas.
+
+                </p>
+
+
+                <p class="login-descripcion">
+
+                    Encuentra productos seleccionados para acompañar
+                    el cuidado, la alimentación y la calidad de vida
+                    de toda tu familia.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================================= -->
+        <!-- PANEL DERECHO -->
+        <!-- ========================================= -->
+
+        <section class="login-acceso">
+
+
+            <div class="login-tarjeta">
+
+
+                <p class="login-bienvenida">
+
+                    Bienvenido a
+                    <strong>VidaFit Market</strong>
+
+                </p>
+
+
+                <h2>
+                    Iniciar sesión
+                </h2>
+
+
+                <p class="login-instruccion">
+
+                    Ingresa con tu correo electrónico y contraseña.
+
+                </p>
+
+
+
+                <!-- CORREO -->
+
+                <div class="login-campo">
+
+                    <label for="correo">
+
+                        Correo electrónico
+
+                    </label>
+
+
+                    <input
+                        type="email"
+                        id="correo"
+                        placeholder="Ejemplo: usuario@gmail.com"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+
+                <!-- CONTRASEÑA -->
+
+                <div class="login-campo">
+
+                    <label for="contraseña">
+
+                        Contraseña
+
+                    </label>
+
+
+                    <input
+                        type="password"
+                        id="contraseña"
+                        placeholder="Ingrese su contraseña"
+                        autocomplete="new-password"
+                    >
+
+                </div>
+
+
+
+                <!-- MENSAJE -->
+
+                <p
+                    id="mensajeLogin"
+                    class="mensaje-login"
+                >
+                </p>
+
+
+
+                <!-- BOTONES -->
+
+                <div class="login-botones">
+
+
+                    <button
+                        type="button"
+                        onclick="iniciarSesion()"
+                        class="boton-login-principal"
+                    >
+
+                        Iniciar sesión
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        onclick="continuarComoVisitante()"
+                        class="boton-login-visitante"
+                    >
+
+                        Explorar catálogo
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        onclick="limpiarLogin()"
+                        class="boton-login-limpiar"
+                    >
+
+                        Limpiar campos
+
+                    </button>
+
+
+                </div>
+
+
+
+                <p class="login-registro">
+
+                    ¿Todavía no tienes una cuenta?
+
+                    <a href="registro.html">
+
+                        Regístrate
+
+                    </a>
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- ========================================= -->
+            <!-- BENEFICIOS DE CREAR UNA CUENTA -->
+            <!-- ========================================= -->
+
+            <section class="login-roles">
+
+
+                <h3>
+                    Beneficios de crear una cuenta
+                </h3>
+
+
+                <div class="login-roles-grid">
+
+
+                    <article class="login-rol">
+
+                        <span class="login-rol-icono">
+
+                            ✓
+
+                        </span>
+
+
+                        <div>
+
+                            <h4>
+                                Consulta tus pedidos
+                            </h4>
+
+                            <p>
+                                Revisa el estado y el historial
+                                de tus compras.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="login-rol">
+
+                        <span class="login-rol-icono">
+
+                            🐾
+
+                        </span>
+
+
+                        <div>
+
+                            <h4>
+    Bienestar para ti y tus mascotas
+</h4>
+
+<p>
+    Accede a productos y recomendaciones relacionados
+    con tus necesidades y las de tus mascotas.
+</p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="login-rol">
+
+                        <span class="login-rol-icono">
+
+                            ★
+
+                        </span>
+
+
+                        <div>
+
+                            <h4>
+                                Recibe recomendaciones
+                            </h4>
+
+                            <p>
+                                Encuentra productos relacionados
+                                con tus necesidades y las de tu mascota.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ========================================= -->
+    <!-- PIE DE PÁGINA -->
+    <!-- ========================================= -->
+
+    <footer class="login-footer">
+
+        <p>
+            © 2026 VidaFit Market
+        </p>
+
+    </footer>
+
+
+
+    <!-- ========================================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ========================================= -->
+
+    <script src="js/login.js"></script>
+
+
+</body>
+
+</html>

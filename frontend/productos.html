@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Productos - VidaFit Market
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/estilos.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ========================================= -->
+    <!-- ENCABEZADO -->
+    <!-- ========================================= -->
+
+    <header>
+
+        <h1>
+            VidaFit Market
+        </h1>
+
+
+        <nav>
+
+            <a href="index.html">
+                Inicio
+            </a>
+
+            <a href="administradores.html">
+                Administradores
+            </a>
+
+            <a href="usuarios.html">
+                Usuarios
+            </a>
+
+            <a href="productos.html">
+                Productos
+            </a>
+
+            <a href="blog.html">
+                Blog
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ========================================= -->
+    <!-- CONTENIDO PRINCIPAL -->
+    <!-- ========================================= -->
+
+    <main>
+
+
+        <h2 class="titulo-seccion">
+            Gestión de Productos
+        </h2>
+
+
+
+        <!-- ========================================= -->
+        <!-- FORMULARIO DE PRODUCTOS -->
+        <!-- ========================================= -->
+
+        <section class="formulario">
+
+
+            <h3 id="tituloFormulario">
+                Registrar producto
+            </h3>
+
+
+            <form id="formProducto">
+
+
+                <!-- ID DEL PRODUCTO OCULTO -->
+
+                <input
+                    type="hidden"
+                    id="idProducto">
+
+
+
+                <!-- ID DEL ADMINISTRADOR -->
+
+                <input
+                    type="number"
+                    id="idAdmin"
+                    placeholder="ID del administrador"
+                    min="1"
+                    value="1"
+                    required>
+
+
+
+                <!-- NOMBRE DEL PRODUCTO -->
+
+                <input
+                    type="text"
+                    id="nombre"
+                    placeholder="Nombre del producto"
+                    maxlength="100"
+                    required>
+
+
+
+                <!-- CATEGORÍA -->
+
+                <input
+                    type="text"
+                    id="categoria"
+                    placeholder="Categoría del producto"
+                    maxlength="100"
+                    required>
+
+
+
+                <!-- PRECIO -->
+
+                <input
+                    type="number"
+                    id="precio"
+                    placeholder="Precio del producto"
+                    min="0"
+                    step="0.01"
+                    required>
+
+
+
+                <!-- STOCK -->
+
+                <input
+                    type="number"
+                    id="stock"
+                    placeholder="Cantidad disponible en stock"
+                    min="0"
+                    step="1"
+                    required>
+
+
+
+                <!-- DESCRIPCIÓN -->
+
+                <textarea
+                    id="descripcion"
+                    placeholder="Descripción del producto"
+                    maxlength="300"
+                    rows="5"
+                    required></textarea>
+
+
+
+                <!-- BENEFICIO -->
+
+                <textarea
+                    id="beneficio"
+                    placeholder="Beneficio del producto"
+                    maxlength="200"
+                    rows="4"
+                    required></textarea>
+
+
+
+                <!-- TIPO DE PRODUCTO -->
+
+                <select
+                    id="tipoUsuario"
+                    required>
+
+
+                    <option value="">
+
+                        Seleccione para quién es el producto
+
+                    </option>
+
+
+                    <option value="Humano">
+
+                        Humano
+
+                    </option>
+
+
+                    <option value="Mascota">
+
+                        Mascota
+
+                    </option>
+
+
+                </select>
+
+
+
+                <!-- BOTÓN GUARDAR -->
+
+                <button
+                    type="submit"
+                    id="btnGuardar">
+
+                    Guardar producto
+
+                </button>
+
+
+
+                <!-- BOTÓN LIMPIAR -->
+
+                <button
+                    type="button"
+                    onclick="limpiarFormulario()">
+
+                    Limpiar
+
+                </button>
+
+
+            </form>
+
+
+        </section>
+
+
+
+        <!-- ========================================= -->
+        <!-- LISTA DE PRODUCTOS -->
+        <!-- ========================================= -->
+
+        <section>
+
+
+            <h3 class="titulo-seccion">
+                Lista de Productos
+            </h3>
+
+
+
+            <!-- PERMITE DESPLAZAR LA TABLA -->
+
+            <div style="overflow-x: auto;">
+
+
+                <table class="tabla">
+
+
+                    <thead>
+
+
+                        <tr>
+
+
+                            <th>
+                                ID
+                            </th>
+
+
+                            <th>
+                                Administrador
+                            </th>
+
+
+                            <th>
+                                Nombre
+                            </th>
+
+
+                            <th>
+                                Categoría
+                            </th>
+
+
+                            <th>
+                                Precio
+                            </th>
+
+
+                            <th>
+                                Stock
+                            </th>
+
+
+                            <th>
+                                Estado
+                            </th>
+
+
+                            <th>
+                                Tipo
+                            </th>
+
+
+                            <th>
+                                Descripción
+                            </th>
+
+
+                            <th>
+                                Beneficio
+                            </th>
+
+
+                            <th>
+                                Acciones
+                            </th>
+
+
+                        </tr>
+
+
+                    </thead>
+
+
+
+                    <tbody id="tablaProductos">
+
+
+                        <tr>
+
+
+                            <td colspan="11">
+
+                                Cargando productos...
+
+                            </td>
+
+
+                        </tr>
+
+
+                    </tbody>
+
+
+                </table>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ========================================= -->
+    <!-- PIE DE PÁGINA -->
+    <!-- ========================================= -->
+
+    <footer>
+
+        <p>
+            © 2026 VidaFit Market
+        </p>
+
+    </footer>
+
+
+
+    <!-- ========================================= -->
+    <!-- ARCHIVO JAVASCRIPT -->
+    <!-- ========================================= -->
+
+<script src="js/productos.js"></script>
+<script src="js/seguridad.js"></script>
+<script src="js/menu.js"></script>
+
+</body>
+</html>

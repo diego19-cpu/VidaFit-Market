@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Gestión de devoluciones - VidaFit Market
+    </title>
+
+    <!-- ESTILOS GENERALES DEL PROYECTO -->
+    <link
+        rel="stylesheet"
+        href="css/estilos.css"
+    >
+
+
+    <!-- ESTILOS SOLO PARA ESTA PÁGINA -->
+    <style>
+
+        /* CONTENIDO PRINCIPAL */
+
+        .contenido-devoluciones {
+
+            padding: 30px 25px 60px;
+
+        }
+
+
+        .titulo-devoluciones {
+
+            text-align: center;
+
+            color: #1f7a3f;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        /* TARJETA PRINCIPAL */
+
+        .panel-devoluciones {
+
+            width: 100%;
+
+            max-width: 1250px;
+
+            margin: 0 auto;
+
+            padding: 25px;
+
+            background-color: white;
+
+            border-radius: 12px;
+
+            box-shadow: 0 3px 12px
+                rgba(0, 0, 0, 0.12);
+
+            box-sizing: border-box;
+
+        }
+
+
+        .panel-devoluciones h3 {
+
+            color: #1f7a3f;
+
+            margin-top: 0;
+
+        }
+
+
+        .descripcion-devoluciones {
+
+            text-align: center;
+
+            line-height: 1.6;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        /* CONTENEDOR RESPONSIVO */
+
+        .contenedor-tabla {
+
+            width: 100%;
+
+            overflow-x: auto;
+
+        }
+
+
+        /* TABLA */
+
+        .tabla-devoluciones {
+
+            width: 100%;
+
+            min-width: 1050px;
+
+            border-collapse: collapse;
+
+            background-color: white;
+
+        }
+
+
+        .tabla-devoluciones th {
+
+            padding: 12px 10px;
+
+            background-color: #1f7a3f;
+
+            color: white;
+
+            text-align: center;
+
+            border: 1px solid #dddddd;
+
+            white-space: nowrap;
+
+        }
+
+
+        .tabla-devoluciones td {
+
+            padding: 11px 10px;
+
+            border: 1px solid #dddddd;
+
+            text-align: center;
+
+            vertical-align: middle;
+
+        }
+
+
+        .tabla-devoluciones tbody tr:nth-child(even) {
+
+            background-color: #f5f5f5;
+
+        }
+
+
+        .tabla-devoluciones tbody tr:hover {
+
+            background-color: #edf8f1;
+
+        }
+
+
+        /* COLUMNAS DE TEXTO */
+
+        .tabla-devoluciones td:nth-child(5),
+
+        .tabla-devoluciones td:nth-child(6) {
+
+            min-width: 170px;
+
+            text-align: left;
+
+        }
+
+
+        /* BOTONES */
+
+        .tabla-devoluciones button {
+
+            margin: 3px;
+
+            padding: 8px 12px;
+
+            border: none;
+
+            border-radius: 7px;
+
+            background-color: #1f7a3f;
+
+            color: white;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+        }
+
+
+        .tabla-devoluciones button:hover {
+
+            background-color: #155c2e;
+
+        }
+
+
+        /* PIE DE PÁGINA */
+
+        footer {
+
+            text-align: center;
+
+            padding: 30px 15px;
+
+        }
+
+
+        /* CELULARES */
+
+        @media screen and (max-width: 768px) {
+
+            .contenido-devoluciones {
+
+                padding: 20px 10px 40px;
+
+            }
+
+
+            .panel-devoluciones {
+
+                padding: 15px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ENCABEZADO -->
+
+    <header>
+
+        <h1>
+            VidaFit Market
+        </h1>
+
+        <nav id="menuPrincipal">
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+
+    <main class="contenido-devoluciones">
+
+
+        <h2 class="titulo-devoluciones">
+
+            Gestión de devoluciones
+
+        </h2>
+
+
+        <section class="panel-devoluciones">
+
+
+            <h3>
+
+                Solicitudes registradas
+
+            </h3>
+
+
+            <p class="descripcion-devoluciones">
+
+                Consulta las solicitudes realizadas por los clientes
+                y cambia su estado cuando corresponda.
+
+            </p>
+
+
+            <div class="contenedor-tabla">
+
+
+                <table class="tabla-devoluciones">
+
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ID</th>
+
+                            <th>Pedido</th>
+
+                            <th>Producto</th>
+
+                            <th>Cantidad</th>
+
+                            <th>Motivo</th>
+
+                            <th>Comentario</th>
+
+                            <th>Estado</th>
+
+                            <th>Fecha</th>
+
+                            <th>Acciones</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="tablaDevoluciones">
+
+                        <tr>
+
+                            <td colspan="9">
+
+                                Consultando devoluciones...
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+
+                </table>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- PIE DE PÁGINA -->
+
+    <footer>
+
+        <p>
+
+            © 2026 VidaFit Market
+
+        </p>
+
+    </footer>
+
+
+
+    <!-- ARCHIVOS JAVASCRIPT -->
+
+    <script src="js/menu.js"></script>
+
+    <script src="js/devoluciones.js"></script>
+
+
+</body>
+
+</html>

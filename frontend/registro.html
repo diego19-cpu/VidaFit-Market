@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Crear cuenta - VidaFit Market
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/estilos.css"
+    >
+
+</head>
+
+
+<body class="pagina-registro">
+
+
+    <main class="registro-contenedor">
+
+
+        <!-- ========================================= -->
+        <!-- PANEL IZQUIERDO -->
+        <!-- ========================================= -->
+
+        <section class="registro-presentacion">
+
+
+            <div class="registro-marca">
+
+
+                <div class="registro-logo-contenedor">
+
+                    <img
+                        src="img/logo/logo.png"
+                        alt="Logo de VidaFit Market"
+                        class="registro-logo"
+                    >
+
+                </div>
+
+
+                <h1>
+                    VidaFit Market
+                </h1>
+
+
+                <p class="registro-frase">
+
+                    Bienestar y nutrición para personas y mascotas.
+
+                </p>
+
+
+                <p class="registro-descripcion">
+
+                    Crea tu cuenta y accede a productos,
+                    recomendaciones y herramientas para cuidar
+                    el bienestar de toda tu familia.
+
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ========================================= -->
+        <!-- PANEL DERECHO -->
+        <!-- ========================================= -->
+
+        <section class="registro-acceso">
+
+
+            <form
+                id="formRegistro"
+                class="registro-tarjeta"
+            >
+
+
+                <p class="registro-bienvenida">
+
+                    Únete a
+
+                    <strong>
+                        VidaFit Market
+                    </strong>
+
+                </p>
+
+
+                <h2>
+                    Crear cuenta
+                </h2>
+
+
+                <p class="registro-instruccion">
+
+                    Completa tus datos para comenzar.
+
+                </p>
+
+
+
+                <!-- FILA NOMBRE Y APELLIDO -->
+
+                <div class="registro-fila">
+
+
+                    <div class="registro-campo">
+
+                        <label for="nombre">
+
+                            Nombre
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            placeholder="Ingrese su nombre"
+                            autocomplete="given-name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="registro-campo">
+
+                        <label for="apellido">
+
+                            Apellido
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="apellido"
+                            placeholder="Ingrese su apellido"
+                            autocomplete="family-name"
+                            required
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- FILA CORREO Y TELÉFONO -->
+
+                <div class="registro-fila">
+
+
+                    <div class="registro-campo">
+
+                        <label for="correo">
+
+                            Correo electrónico
+
+                        </label>
+
+
+                        <input
+                            type="email"
+                            id="correo"
+                            placeholder="Ejemplo: usuario@gmail.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="registro-campo">
+
+                        <label for="telefono">
+
+                            Teléfono
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="telefono"
+                            placeholder="Ingrese su teléfono"
+                            autocomplete="tel"
+                            required
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- CONTRASEÑA -->
+
+                <div class="registro-campo">
+
+                    <label for="contraseña">
+
+                        Contraseña
+
+                    </label>
+
+
+                    <input
+                        type="password"
+                        id="contraseña"
+                        placeholder="Cree una contraseña"
+                        autocomplete="new-password"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- MENSAJE -->
+
+                <p
+                    id="mensajeRegistro"
+                    class="mensaje-registro"
+                >
+                </p>
+
+
+
+                <!-- BOTONES -->
+
+                <div class="registro-botones">
+
+
+                    <button
+                        type="submit"
+                        id="btnRegistrar"
+                        class="boton-registro-principal"
+                    >
+
+                        Crear cuenta
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        onclick="limpiarRegistro()"
+                        class="boton-registro-limpiar"
+                    >
+
+                        Limpiar campos
+
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- IR AL LOGIN -->
+
+                <p class="registro-login">
+
+                    ¿Ya tienes una cuenta?
+
+                    <a href="login.html">
+
+                        Iniciar sesión
+
+                    </a>
+
+                </p>
+
+
+                <p class="registro-volver">
+
+                    <a href="inicio.html">
+
+                        Volver al inicio
+
+                    </a>
+
+                </p>
+
+
+            </form>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ========================================= -->
+    <!-- PIE DE PÁGINA -->
+    <!-- ========================================= -->
+
+    <footer class="registro-footer">
+
+        <p>
+            © 2026 VidaFit Market
+        </p>
+
+    </footer>
+
+
+
+    <!-- ========================================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ========================================= -->
+
+    <script src="js/registro.js"></script>
+
+
+</body>
+
+</html>

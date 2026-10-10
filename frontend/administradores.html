@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administradores - VidaFit Market</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>VidaFit Market</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="administradores.html">Administradores</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="titulo-seccion">Gestión de Administradores</h2>
+
+        <section class="formulario">
+            <h3>Registrar administrador</h3>
+
+            <form id="formAdministrador">
+                <input type="hidden" id="idAdmin">
+
+                <input type="text" id="nombre" placeholder="Nombre" required>
+                <input type="text" id="apellido" placeholder="Apellido" required>
+                <input type="email" id="correo" placeholder="Correo" required>
+                <input type="password" id="contrasena" placeholder="Contraseña" required>
+
+                <button type="submit" id="btnGuardar">Guardar administrador</button>
+                <button type="button" onclick="limpiarFormulario()">Limpiar</button>
+            </form>
+        </section>
+
+        <section>
+            <h3 class="titulo-seccion">Lista de administradores</h3>
+
+            <table class="tabla">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Correo</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaAdministradores">
+                    <!-- Aquí se cargan los administradores -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 VidaFit Market</p>
+    </footer>
+
+   <script src="js/administradores.js"></script>
+<script src="js/seguridad.js"></script>
+<script src="js/menu.js"></script>
+
+</body>
+</html>

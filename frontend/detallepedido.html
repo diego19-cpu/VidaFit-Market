@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Detalle Pedido - VidaFit Market
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/estilos.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ========================================= -->
+    <!-- ENCABEZADO -->
+    <!-- ========================================= -->
+
+    <header>
+
+        <h1>
+            VidaFit Market
+        </h1>
+
+
+        <nav>
+
+            <a href="index.html">
+                Inicio
+            </a>
+
+            <a href="administradores.html">
+                Administradores
+            </a>
+
+            <a href="usuarios.html">
+                Usuarios
+            </a>
+
+            <a href="productos.html">
+                Productos
+            </a>
+
+            <a href="mascotas.html">
+                Mascotas
+            </a>
+
+            <a href="pedidos.html">
+                Pedidos
+            </a>
+
+            <a href="detallepedido.html">
+                Detalle Pedido
+            </a>
+
+            <a href="blog.html">
+                Blog
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ========================================= -->
+    <!-- CONTENIDO PRINCIPAL -->
+    <!-- ========================================= -->
+
+    <main>
+
+
+        <h2 class="titulo-seccion">
+            Detalle de Pedidos
+        </h2>
+
+
+
+        <!-- ========================================= -->
+        <!-- FORMULARIO -->
+        <!-- ========================================= -->
+
+        <section class="formulario">
+
+
+            <h3>
+                Consultar productos del pedido
+            </h3>
+
+
+            <form id="formDetallePedido">
+
+
+                <!-- PEDIDO -->
+
+                <select
+                    id="idPedido"
+                    required>
+
+
+                    <option value="">
+
+                        Cargando pedidos...
+
+                    </option>
+
+
+                </select>
+
+
+
+                <!-- CONSULTAR -->
+
+                <button
+                    type="submit">
+
+                    Ver detalle
+
+                </button>
+
+
+
+                <!-- LIMPIAR -->
+
+                <button
+                    type="button"
+                    onclick="limpiarFormulario()">
+
+                    Limpiar
+
+                </button>
+
+
+            </form>
+
+
+        </section>
+
+
+
+        <!-- ========================================= -->
+        <!-- LISTA DE PRODUCTOS COMPRADOS -->
+        <!-- ========================================= -->
+
+        <section>
+
+
+            <h3 class="titulo-seccion">
+                Productos del Pedido
+            </h3>
+
+
+
+            <div style="overflow-x: auto;">
+
+
+                <table class="tabla">
+
+
+                    <thead>
+
+
+                        <tr>
+
+
+                            <th>
+                                ID Detalle
+                            </th>
+
+
+                            <th>
+                                Producto
+                            </th>
+
+
+                            <th>
+                                Categoría
+                            </th>
+
+
+                            <th>
+                                Precio
+                            </th>
+
+
+                            <th>
+                                Cantidad
+                            </th>
+
+
+                            <th>
+                                Subtotal
+                            </th>
+
+
+                        </tr>
+
+
+                    </thead>
+
+
+
+                    <tbody id="tablaDetalles">
+
+
+                        <tr>
+
+
+                            <td colspan="6">
+
+                                Seleccione un pedido para ver sus productos.
+
+                            </td>
+
+
+                        </tr>
+
+
+                    </tbody>
+
+
+                </table>
+
+
+            </div>
+
+
+
+            <!-- TOTAL -->
+
+            <h3
+                class="titulo-seccion"
+                id="totalPedido">
+
+                Total de los detalles: $0
+
+            </h3>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ========================================= -->
+    <!-- PIE DE PÁGINA -->
+    <!-- ========================================= -->
+
+    <footer>
+
+        <p>
+            © 2026 VidaFit Market
+        </p>
+
+    </footer>
+
+
+
+    <!-- ========================================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ========================================= -->
+
+   <script src="js/detallepedido.js"></script>
+<script src="js/seguridad.js"></script>
+<script src="js/menu.js"></script>
+
+</body>
+</html>
