@@ -4,7 +4,7 @@
 
 ---
 
-# 🇪🇸 Español
+# Español
 
 ## Información General
 
